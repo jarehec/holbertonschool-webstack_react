@@ -7,13 +7,16 @@ class Counter extends Component {
   }
   
   render() {
-    const { value, onIncrement } = this.props
+    const { value, onIncrement, onDecrement } = this.props
     return (
       <div>
         {value}
         <br/>
         <button onClick={onIncrement}>
           Increment
+        </button>
+        <button onClick={onDecrement}>
+          Decrement
         </button>
       </div>
     )
@@ -22,7 +25,8 @@ class Counter extends Component {
 
 Counter.propTypes = {
   value: PropTypes.number.isRequired,
-  onIncrement: PropTypes.func.isRequired
+  onIncrement: PropTypes.func.isRequired,
+  onDecrement: PropTypes.func.isRequired
 }
 
 export default Counter
