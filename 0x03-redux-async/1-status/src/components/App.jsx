@@ -19,7 +19,6 @@ class AppComponent extends React.Component {
           } else {
             this.props.received("");
           }
-          console.log(this);
         })
   }
   render() {

@@ -4,7 +4,7 @@ const AppReducers = (state = {}, action) => {
     case 'FETCHING':
       return {...state, is_fetching: true, status: "OK"}
     case 'RECEIVED':
-      return {...state, is_fetching: false, status}
+      return {...state, is_fetching: false, status: action.status}
     default:
       return state
   }
